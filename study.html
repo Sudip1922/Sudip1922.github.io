@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Study Subject</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="images/loogo.jpg" alt="My Logo" title="My Logo" class="logo" width="100"/>
+  </header>
+
+  <nav class="horizontal-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="study.html">My Study Subject</a></li>
+      <li><a href="hobbies.html">My Hobbies</a></li>
+      <li><a href="music.html">My Music</a></li>
+      <li><a href="house.php">My House</a></li>
+    </ul>
+  </nav>
+   
+
+    <main class="content">
+      <article>
+        <h2>My Study Subjects</h2>
+        <ol>
+          <li>Developing web information system</li>
+          <li>Cloud and Beyond</li>
+          <li>Data structure and algorithms</li>
+          <li>Software Engineering</li>
+        </ol>
+
+        <h3>My Weekly Schedule</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+          <tr>
+            <th>Day</th>
+            <th>Subject</th>
+            <th>Time</th>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Developing web information systems</td>
+            <td>1:00 PM - 4:00 PM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Cloud And Beyond</td>
+            <td>5:00 PM - 8:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Data structure and algorothms</td>
+            <td>1:00 PM - 3:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Software Engineering</td>
+            <td>5:00 PM - 8:00 PM</td>
+          </tr>
+
+        </table>
+
+        <p>
+          <strong>Schedule Screenshot:</strong><br />
+          <img src="images/screenshot.png" alt="My Schedule" title="Weekly Schedule" width="400" />
+        </p>
+      </article>
+    </main>
+
+  </div>
+
+  <footer>
+    <p>Email: sudeepbaneeya@gmail.com | Phone: 0406 358 036</p>
+    <p><a href="https://www.facebook.com/sudip.baneeya/about" target="_blank">My Facebook</a> | Created on: April 2025</p>
+  </footer>
+
+</body>
+<script>
+  const footer = document.querySelector('footer');
+  let timer = null;
+
+  const showFooter = () => {
+    footer.classList.remove('hidden');
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      footer.classList.add('hidden');
+    }, 3000); // Hide after 3 seconds of no activity
+  };
+
+  document.addEventListener('mousemove', showFooter);
+  document.addEventListener('scroll', showFooter);
+  document.addEventListener('touchstart', showFooter);
+
+  // Start with footer hidden
+  window.addEventListener('DOMContentLoaded', () => {
+    footer.classList.add('hidden');
+  });
+</script>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Hobbies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="images/loogo.jpg" alt="My Logo" title="My Logo" class="logo" width="100"/>
+  </header>
+
+  <nav class="horizontal-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="study.html">My Study Subject</a></li>
+      <li><a href="hobbies.html">My Hobbies</a></li>
+      <li><a href="music.html">My Music</a></li>
+      <li><a href="house.php">My House</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-container">
+
+    <main class="content">
+      <article>
+        <h2>My Hobbies</h2>
+        <p>I believe that hobbies are an essential part of life. They keep me relaxed, happy, and allow me to explore new interests. Here are some of my favorite hobbies:</p>
+        
+        <ul>
+          <li>
+            <h3>Reading Novels</h3>
+            <img src="images/ikigai.jpg" alt="Reading" title="Reading" width="100" />
+            <p>Reading novels has always been my escape to a world of creativity and imagination. My favorite genres are mystery, fiction, and philosophy. Books like "Ikigai" have taught me valuable life lessons and sparked new perspectives on life. There’s nothing like getting lost in a good book!</p>
+          </li>
+          
+          <li>
+            <h3>Playing Football</h3>
+            <img src="images/football.jpg" alt="Football" title="Football" width="100" />
+            <p>Football has been a passion of mine for years. The thrill of the game, the teamwork, and the rush of scoring a goal—it's exhilarating! Whether I’m playing for fun with friends or watching a match, football is a sport that brings me joy and excitement. I also enjoy the physical and mental challenge it provides.</p>
+          </li>
+          
+          <li>
+            <h3>Photography</h3>
+            <img src="images/photography.jpg" alt="Photography" title="Photography" width="100" />
+            <p>Photography allows me to capture the beauty around me and preserve memories. From nature shots to urban landscapes, every picture tells a story. I love experimenting with different styles, lighting, and compositions. Whether it’s through a camera or my phone, photography helps me see the world in a new light.</p>
+          </li>
+          
+          <li>
+            <h3>Travelling</h3>
+            <img src="images/travel.jpg" alt="Travel" title="Travel" width="100" />
+            <p>Travelling is one of the best ways to learn about different cultures, meet new people, and experience new places. Whether it’s a weekend getaway or a longer adventure abroad, I love exploring new destinations. I believe travelling opens the mind and gives me a broader perspective of the world.</p>
+          </li>
+        </ul>
+      </article>
+    </main>
+
+  </div>
+
+  <footer>
+    <p>Email: sudeepbaneeya@gmail.com | Phone: 0406 358 036</p>
+    <p><a href="https://www.facebook.com/sudip.baneeya/about" target="_blank">My Facebook</a> | Created on: April 2025</p>
+  </footer>
+
+</body>
+<script>
+  const footer = document.querySelector('footer');
+  let timer = null;
+
+  const showFooter = () => {
+    footer.classList.remove('hidden');
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      footer.classList.add('hidden');
+    }, 3000); // Hide after 3 seconds of no activity
+  };
+
+  document.addEventListener('mousemove', showFooter);
+  document.addEventListener('scroll', showFooter);
+  document.addEventListener('touchstart', showFooter);
+
+  // Start with footer hidden
+  window.addEventListener('DOMContentLoaded', () => {
+    footer.classList.add('hidden');
+  });
+</script>
+
+</html>

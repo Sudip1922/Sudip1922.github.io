@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website - Music</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="images/loogo.jpg" alt="My Logo" title="Personal Logo" width="100">
+  </header>
+
+  <nav class="horizontal-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="study.html">My Study Subject</a></li>
+      <li><a href="hobbies.html">My Hobbies</a></li>
+      <li><a href="music.html">My Music</a></li>
+      <li><a href="house.php">My House</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <h2 style="color: #0d47a1;">🎶 My Favorite Music</h2>
+    <p>Below are some of my favorite music tracks. Click on the artist names to explore more about them!</p>
+
+    <article>
+      <h3>1. <a href="imagine_dragons.html" target="_blank">Imagine Dragons</a> – Believer</h3>
+      <audio controls>
+        <source src="audios/believer.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <p><strong>About the Artist:</strong> Imagine Dragons is an American pop rock band known for energetic tracks like "Believer" and "Radioactive." Their music blends rock, pop, and electronic elements.</p>
+    </article>
+
+    <article>
+      <h3>2. <a href="billie_eilish.html" target="_blank">Billie Eilish</a> – Ocean Eyes</h3>
+      <audio controls>
+        <source src="audios/oceaneyes.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <p><strong>About the Artist:</strong> Billie Eilish is a Grammy-winning singer-songwriter known for her unique voice and dark, emotional lyrics. "Ocean Eyes" was her breakout hit at just 14 years old.</p>
+    </article>
+
+    <article>
+      <h3>3. <a href="ed_sheeran.html" target="_blank">Ed Sheeran</a> – Perfect (Music Video)</h3>
+      <video width="480" height="270" controls>
+        <source src="audios/musicvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>About the Artist:</strong> Ed Sheeran is a British singer-songwriter famous for heartfelt ballads like "Perfect" and "Thinking Out Loud." His acoustic style and storytelling lyrics have won global acclaim.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>Email: sudeepbaneeya@gmail.com | Phone: 0406 358 036</p>
+    <p><a href="https://www.facebook.com/sudip.baneeya/about" target="_blank">My Facebook</a></p>
+    <p>Site created on: 22 April 2025</p>
+  </footer>
+
+</body>
+<script>
+  const footer = document.querySelector('footer');
+  let timer = null;
+
+  const showFooter = () => {
+    footer.classList.remove('hidden');
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      footer.classList.add('hidden');
+    }, 3000); // Hide after 3 seconds of no activity
+  };
+
+  document.addEventListener('mousemove', showFooter);
+  document.addEventListener('scroll', showFooter);
+  document.addEventListener('touchstart', showFooter);
+
+  // Start with footer hidden
+  window.addEventListener('DOMContentLoaded', () => {
+    footer.classList.add('hidden');
+  });
+</script>
+
+</html>
